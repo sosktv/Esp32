@@ -1,0 +1,6 @@
+{
+  "C_Cpp.intelliSenseEngine": "Tag Parser",
+  "files.associations": {
+    "audio_element.h": "c"
+  }
+}
