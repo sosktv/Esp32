@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/CMakeFiles/bootloader
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/CMakeFiles/bootloader.rule
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/CMakeFiles/bootloader-complete.rule
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/CODEDesign/TOOLCREATE/i2s_adc_dac/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
