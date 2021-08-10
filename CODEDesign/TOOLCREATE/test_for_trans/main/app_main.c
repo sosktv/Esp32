@@ -63,7 +63,7 @@ void example_i2s_init(void)
 {
      int i2s_num = EXAMPLE_I2S_NUM;
      i2s_config_t i2s_config = {
-        .mode = I2S_MODE_MASTER | I2S_MODE_RX ,
+        .mode = I2S_MODE_SLAVE | I2S_MODE_RX ,
         .sample_rate =  EXAMPLE_I2S_SAMPLE_RATE,
         .bits_per_sample = EXAMPLE_I2S_SAMPLE_BITS,
         .communication_format = I2S_COMM_FORMAT_STAND_MSB,
@@ -71,14 +71,13 @@ void example_i2s_init(void)
         .intr_alloc_flags = 0,
         .dma_buf_count = 6,
         .dma_buf_len = 64,
-        // .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1, 
         .use_apll = 1,
      };
     //install and start i2s driver
     i2s_pin_config_t pin_config = {
         .bck_io_num = I2S_BCK_IO,
         .ws_io_num = I2S_WS_IO,
-        // .data_out_num = I2S_DO_IO,
+        .data_out_num = I2S_PIN_NO_CHANGE,
         .data_in_num = I2S_DI_IO                                               
     };
     i2s_driver_install(i2s_num, &i2s_config, 0, NULL);
@@ -125,16 +124,14 @@ void example_disp_buf(uint8_t* buf, int length)
 /**
  * @brief Reset i2s clock and mode
  */
-void example_reset_play_mode(void)
-{
+void example_reset_play_mode(void){
     i2s_set_clk(EXAMPLE_I2S_NUM, EXAMPLE_I2S_SAMPLE_RATE, EXAMPLE_I2S_SAMPLE_BITS, EXAMPLE_I2S_CHANNEL_NUM);
 }
 
 /**
  * @brief Set i2s clock for example audio file
  */
-void example_set_file_play_mode(void)
-{
+void example_set_file_play_mode(void){
     i2s_set_clk(EXAMPLE_I2S_NUM, 44100, EXAMPLE_I2S_SAMPLE_BITS, 1);
 }
 
@@ -176,7 +173,6 @@ void example_i2s_adc_dac(void*arg){
     size_t bytes_read;
     char* i2s_read_buff = (char*) calloc(i2s_read_len, sizeof(char));
     while (1) { 
-
         while (flash_wr_size < FLASH_RECORD_SIZE) {
             //read data from I2S bus
             i2s_read(EXAMPLE_I2S_NUM, (void*) i2s_read_buff, i2s_read_len, &bytes_read, portMAX_DELAY);
