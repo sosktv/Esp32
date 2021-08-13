@@ -92,3 +92,7 @@ I2S: PLL_D2: Req RATE: 16000, real rate: 1004.000, BITS: 16, CLKM: 83, BCK: 60, 
     * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
 
 For any technical queries, please open an [issue](https://github.com/espressif/esp-idf/issues) on GitHub. We will get back to you soon.
+
+# Attention
+
+This fold usually don't change because it use to be a framework which is for I2S.
