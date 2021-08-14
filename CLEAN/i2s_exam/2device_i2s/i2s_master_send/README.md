@@ -1,17 +1,17 @@
 | Supported Targets | ESP32 |
 | ----------------- | ----- |
 
-# I2S Example
+# I2S Master Device Example
 
 (See the README.md file in the upper level 'examples' directory for more information about examples.)
 
-In this example, we generate a 100Hz triangle and sine wave and send it out from left and right channels at a sample rate of 36kHz through the I2S bus.
+In this example, we initialization a master device of i2s. 
 
 ## How to Use Example
 
 ### Hardware Required
 
-* A development board with ESP32 SoC (e.g., ESP32-DevKitC, ESP-WROVER-KIT, etc.)
+* A ESP32 
 * A USB cable for power supply and programming
 
 ### Configure the Project
@@ -54,9 +54,9 @@ If you have a logic analyzer, you can use a logic analyzer to grab online data. 
 
 | pin name| function | gpio_num |
 |:---:|:---:|:---:|
-| WS  |word select| GPIO_NUM_15 |
-| SCK |continuous serial clock| GPIO_NUM_13 |
-| SD  |serial data| GPIO_NUM_21 |
+| WS  |word select| GPIO_NUM_21 |
+| SCK |continuous serial clock| GPIO_NUM_22 |
+| SD  |serial data| GPIO_NUM_19 |
 
 ## Troubleshooting
 
@@ -64,5 +64,3 @@ If you have a logic analyzer, you can use a logic analyzer to grab online data. 
 
     * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
     * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
-
-For any technical queries, please open an [issue](https://github.com/espressif/esp-idf/issues) on GitHub. We will get back to you soon.
